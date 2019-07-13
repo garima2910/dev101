@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Food</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <style>
+        hr { 
+  /* display: block; */
+  margin-left: 550px;
+  margin-right: 550px;
+  border-style: inset;
+  border-bottom-color: green;
+  border-width: 1.5px ;
+   
+}
+
+            .review{
+                margin-top: 5rem;
+                background-image: linear-gradient(rgba(0, 0, 0, 0.596), rgba(0, 0, 0, 0.50)), url("./image/pizza.jpg");
+                background-size: cover;
+            height: 80vh;
+            color: white;
+            }
+            .review h2{
+                text-align: center;
+                margin-top: 3rem;
+                margin-bottom: 2.5rem;
+            }
+            .review-child{
+                padding-right: 4%;
+
+            }
+            blockquote:before{
+                content:"\201C";
+                color:white;
+                display: block;
+                
+
+            }
+            .review-child img{
+                height:2.5rem;
+                border-radius:50%;
+                margin-right:4%
+            }
+            .review-parent{
+                display: flex;
+                font-style: italic;
+            }
+            blockquote{
+                margin-bottom: 1.5rem;
+
+            }
+
+        header {
+
+
+            background-image: linear-gradient(rgba(0, 0, 0, 0.596), rgba(0, 0, 0, 0.50)), url('./image/food.png');
+            background-size: cover;
+            height: 100vh;
+
+
+
+        }
+        div.scrollmenu {
+            overflow: auto;
+            margin-left: 39rem
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            float: left;
+        }
+
+        .article{
+    text-align: center;
+    display: flex;
+}
+.another-section{
+   
+    display: flex;
+}
+/* .another-section,.another-section3{
+    background-color: lightgray;
+} */
+
+.article-section,.another-section1{
+    margin: 20px;
+}
+
+
+
+        div.scrollmenu a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+            margin-left: 2rem;
+
+        }
+
+        div.scrollmenu a:hover {
+        
+        transform: scale(1.20);
+
+
+        }
+
+        .header-anchor:hover,.header-anchor:active {
+            color:rgba(46, 204, 113, 1);
+            background-color: rgba(123, 239, 178, 1);
+            border-block-color: rgba(123, 239, 178, 1);
+            padding:25px;
+            font-size: xx-large;
+
+        }
+
+        .header-anchor:link,
+        .header:visited {
+            background-color: rgba(123, 239, 178, 1);
+            color: white;
+            padding: 1.2rem;
+        }
+
+        .header-anchor1:link,
+        .header-anchor1:visited {
+            color: yellowgreen;
+
+        }
+        
+
+        .header-anchor1:hover,.header-anchor1:active {
+            background-color: rgba(123, 239, 178, 1);
+            border-block-color: rgba(46, 204, 113, 1);
+            color:white;
+            padding: 25px;
+            font-size: xx-large
+        }
+        .section{
+            display: flex;
+            
+            
+        }
+        .section1{
+            margin: 3%;
+             }
+             
+
+        .header-div1 {
+            display: flex;
+            color: white
+        }
+
+
+        .header-div  {
+            color: white;
+            font-family: 'Lato';
+            position: absolute;
+            top: 30%;
+            left: 20%;
+            font-weight: 400;
+            text-align: center;
+
+        }
+
+        .header-anchor {
+
+
+            border: solid rgba(46, 204, 113, 1);
+            background-color: rgba(46, 204, 113, 1);
+            border-radius: 30px;
+            display: inline-block;
+            color: white;
+            border-radius: 50px;
+            text-align: center;
+            padding: 1rem 1rem;
+            margin-right: 50px;
+            font-size: x-large;
+
+            transition: transform .2s, background-color .2s, color .2s;
+
+        }
+        .icon-list{
+            display: flex;
+            padding-bottom: 1rem
+        }
+        .icon-list i{
+            color: darkgreen;
+             font-size: 120%;
+            padding-right: 0.5rem 
+
+
+        }
+        .icon-list p{
+           
+           margin:0;
+        }
+        .icon-list a{
+            color: darkgreen;
+            transition: transform .4s;
+        }
+        .icon-list a:hover{
+            color:lightblue;
+            transform:scale(1.2);
+        }
+        .icon-list1 i{
+            color: darkgreen;
+             font-size: 120%;
+            padding-right: 0.5rem 
+
+
+        }
+        .icon-list1{
+            display: flex;
+            padding-bottom: 1rem
+        }
+    
+        .another-section2{
+            font-size: x-large;
+            margin-left: 200px;
+            margin-top: 10px;
+          
+        }
+
+        .header-anchor1 {
+            display: inline-block;
+            border: solid rgba(46, 204, 113, 1);
+            background-color: transparent;
+            border-radius: 50px;
+            text-align: center;
+            padding: 1rem 1.5rem;
+            color: rgba(46, 204, 113, 1);
+            
+            font-size: x-large;
+
+            transition: transform .2s, background-color .2s, color .2s;
+
+
+
+        }
+        body{
+            color:darkslategray;
+            font-family: 'Lato'
+        }
+        .list{
+            color: darkgreen;
+            display:inline-block;
+            margin-top: 50px;
+            margin-right: 10px;
+            border: 2px solid green;
+            border-radius: 70%;
+            height: 60px;
+            width: 30px;
+            text-align: center;
+            padding-right: 5%;
+            margin-right: 5%
+            
+            
+        }
+        .plan{
+            background-color: lightgrey
+        }
+        .plan-parent{
+            display: flex;
+          
+
+        }
+        .child{
+            margin: 6%;
+            font-size: large;
+            background-color:white;
+            width: 100%;
+            height: 80%;
+            border-radius: 8%
+        }
+        .plan h2{
+            margin-top: 8%
+        }
+        .icon-list1 p{
+            font-size: larger;
+        }
+        .icon-list1 a{
+            color:darkgreen;
+            border: 2px solid green;
+            border-radius: 20%;
+            height: 30px;
+            width: 70px;
+            padding-right: 5%;
+            margin-right: 5%;
+            margin-left: 5%;
+            padding-left: 5%;
+            display: inline-block;
+        }
+        .icon-list1 a:hover{
+            background-color: darkgreen;
+            color:white;
+            transform: scale(1.20);
+
+        }
+        .parent-form{
+            text-align: center;
+            font-size: larger;
+            margin:0 auto;
+        }
+        .parent-form textarea {
+  width: 50%;
+  height: 150px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+}
+input[type=text],textarea,select,input[type=radio] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+ margin-bottom: 2%
+}
+input[type="checkbox"]{
+    margin-bottom: 5%;
+    width:45%
+}
+.steps{
+    background-color: lightgrey
+}
+.child-form{
+    display: flex;
+}
+button{
+    color:darkgreen;
+            border: 2px solid green;
+            border-radius: 8%;
+            font-size: larger;
+            height: 30px;
+            width: 70px;
+            
+
+}
+footer{
+           background-color:rgba(58,56,56);
+           height : 11rem;
+       }
+       .social-link{
+           display: flex;
+           width:40%;
+       }
+
+          .text-value{
+              padding-right: 6%;
+          }
+          .footer-text{
+              display: flex;
+              width:70%;
+            padding-right:6%;
+          }
+          
+          .footer-parent{
+              display: flex;
+              justify-content: space-between;
+              margin-top: 2%;
+              padding-top: 3%;
+              padding-left:4%;
+          }
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="scrollmenu">
+            <ul>
+                <li>
+                    <a>FOODDELIVERY</a>
+                    
+                    <a>HOWITWORKS </a>
+                    
+                    <a>OURCITIES</a>
+                    
+                    <a>SIGNUP</a>
+                    
+
+                </li>
+            </ul>
+
+        </div>
+        <div class="header-div">
+            <h1>
+                GOODBYE JUNK FOOD.<br>
+                HELLO SUPER HEALTHY MEALS
+            </h1>
+            <div class="header-anchor">
+                <a>I'm hunger</a>
+
+            </div>
+            <div class="header-anchor1">
+                <a>show me more</a>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+<center>
+<h2 style="margin-top: 70 px">GET FOOD FAST-NOT FAST FOOD</h2>
+<hr>
+<p style="font-size: large">Hello we're Omnifood ,your new premium food delivery service .We know you're always<br> busy ,no time for cooking .si let us take care of that,we're really good at it we promise!</p>
+</center>
+<div id="article" class="article">
+<div class="article-section">
+<i class="fa fa-3x fa-calendar" style="color: green" ></i>
+<h3>UP TO 365 DAYS/YEARS</h3>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero aliquam repellat cum omnis laboriosam expedita nam officia dolorem veniam quasi. Veniam voluptas fugit aliquam aliquid deserunt inventore accusamus, assumenda fuga magnam doloremque, quae, molestiae eaque quis libero tempore minima. Quam quia velit quasi enim assumenda. Commodi qui, facilis eum deleniti, dolore nulla velit at, quo ipsam soluta unde modi consequatur quos esse labore quasi doloribus provident quibusdam! Nulla rem itaque et cumque cum, dolore vero reprehenderit velit ipsum eligendi enim nesciunt neque voluptatem nemo aliquid aspernatur qui tempore ipsam. Eius minus modi omnis harum! Voluptas, accusamus blanditiis! Laboriosam, error unde? </p>
+</div>
+<div class="article-section">
+ <i class="fa fa-3x fa-truck" style="color: green"></i>
+<h3>READY IN 20 MINUTES</h3>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores a excepturi doloremque consequatur blanditiis officiis dolorum libero dignissimos quod! Ea maiores eius minus quidem dolores a assumenda, facilis tempore cum in error fugit harum ullam praesentium soluta quia nostrum voluptates quaerat porro ex quasi alias. Aspernatur, obcaecati error corrupti neque aut tempore natus nihil! Itaque, iste necessitatibus doloremque repellendus omnis nisi obcaecati nostrum cumque ullam beatae assumenda illo? Accusamus molestiae asperiores laborum hic praesentium rerum, deserunt nisi vero, incidunt, quas eveniet perspiciatis atque saepe! Sapiente, atque, enim aut repudiandae voluptatum, optio amet architecto porro voluptate illo vel rem eos dolorum.</p>
+</div>
+<div class="article-section">
+<i class="fas fa-3x fa-carrot" style="color: green"></i>
+<h3>100% ORGANIC</h3>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit blanditiis temporibus placeat ad sequi consequatur, dolorem harum nostrum accusantium rerum quidem aperiam vitae vel incidunt, cum dignissimos totam ipsam inventore obcaecati accusamus modi dolor fugiat soluta doloribus! Deleniti pariatur asperiores minima facere provident sequi voluptas. Quos, animi laudantium voluptate sequi totam dicta commodi perferendis modi quis reprehenderit iste ipsam vel ex placeat! Aliquam dolores excepturi inventore maiores optio, vel quis suscipit velit ipsa atque veniam quos sequi lam quaerat repellat dignissimos ducimus vero explicabo alias similique. Porro dolore quae corporis sapiente, error nesciunt, commodi iusto earum explicabo dignissimos accusamus accusantium.</p>
+</div>
+<div class="article-section">
+<i class="fas fa-3x fa-box" style="color: green"></i>
+    <h3>ORDER ANYTIME</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quia, nobis fugiat facilis odio atque provident obcaecati. Possimus quaerat quibusdam fugit facilis. Porro illo tempora labore sed ad impedit modi molestias expedita praesentium blanditiis ab quis quas repellat saepe iusto quaerat ipsam, necessitatibus minima. Corporis sed atque esse nemo numquam quis, ut in a dolorum id iusto quisquam doloremque adipisci sint? Possimus numquam asperiores debitis at nobis necessitatibus. Corporis porro, ratione delectus consequuntur perferendis recusandae harum molestiae laborum esse voluptatem sed maxime! Enim, ullam ipsam minima provident amet corrupti quis placeat cumque consequatur accusamus! Earum ipsam quae reprehenderit voluptatum illo.</p>
+</div>
+</div>
+<section class="steps">
+<h1 style="text-align: center;margin-top: 80px">HOW IT WORKS - SIMPLE AS 1,2,3</h1>
+<hr>
+<div class="another-section">
+<div class="another-section1">
+    <img src="./image/app-iphone.png" style="width:300px;height:500px;margin-left: 200px">
+</div>
+
+<div class="another-section2">
+    <p ><div class="list">1</div>choose the subscription plan that best fits your needs and sign up today</p>
+    <p ><div class="list">2</div>order ypur delicious meal using our moblie app or website or you can even call us</p>
+    <p><div class="list">3</div>enjoy your meal after less than 20 minutes.see you the next time!</p>
+</div>
+
+</div>
+  <div class="another-section3">
+ <a>  <img src="image/download-app-android.png"style="margin-left:800px;"> </a> 
+ <a>   <img src="image/download.png" style="width:150px;margin-left:1000px;margin-bottom: 50px"></a>  
+</div>
+</section>
+<section class="cities">  
+<h1 style="margin-top: 20px;text-align: center">WE'RE CURRENTLY IN THESE CITIES</h1>
+<hr>
+<div class="section">
+    <div class="section1">
+    <div class="child-section">
+        <img src="image/download2.jpg" style="width: 15rem; height:10rem;">
+        <h3>LISBON</h3>
+      <div class="icon-list" > <i class="fas fa-1x fa-user"></i><div><p>1600+ happy eaters</p></div></div>
+      <div class="icon-list" ><i class="fas fa-1x  fa-crown"></i><div><p>60+ top chef's</p></div></div>
+        <div class="icon-list" > <i class="fab fa-1x  fa-twitter"></i><a>@omnnifood_lx</a></div>
+     </div>   
+    </div>
+    <div class="section1">
+        <div class="child-section">
+        <img src="image/download1.jpg" style="width: 15rem;height:10rem">
+        <h3>SAN FRANCISCO</h3>
+    </div>
+        <div class="icon-list" > <i class="fas fa-1x fa-user"></i><div><p>3700+ happy eaters</p></div></div>
+        <div class="icon-list" > <i class="fas fa-1x  fa-crown"></i><div><p>160+ top chef's</p></div></div>
+        <div class="icon-list" > <i class="fab fa-1x  fa-twitter"></i><a >@omnnifood_sf</a></div>
+        
+    </div>
+    <div class="section1">
+        <img src="image/download3.jpg" style="width: 15rem;height: 10rem">
+        <h3>BERLIN</h3>
+        <div class="icon-list" > <i class="fas fa-1x fa-user"></i><p>1600+ happy eaters</p></div>
+        <div class="icon-list" ><i class="fas fa-1x  fa-crown"></i><p>110+ top chef's</p></div>
+        <div class="icon-list" ><i class="fab fa-1x  fa-twitter"></i><a>@omnnifood_berlin</a></div>
+    </div>
+    <div class="section1">
+        <img src="image/download4.jpg" style="width: 15rem ;height:10rem">
+        <h3>LONDON</h3>
+        <div class="icon-list" > <i class="fas fa-1x fa-user"></i><div><p>1200+ happy eaters</p></div></div>
+        <div class="icon-list" > <i class="fas fa-1x fa-crown"></i><div><p>50+ top chef's</p></div></div>
+        <div class="icon-list" > <i class="fab fa-1x fa-twitter"></i><a>@omnnifood_london</a></div>
+    </div>
+
+
+</div>
+</section>
+<section class="review">
+<h2>OUR CUSTOMER CAN'T LIVE WITHOUT US</h2>
+<hr>
+<div class="review-parent">
+    <div class="review-child">
+<blockquote>
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita totam quo nobis, illo error, velit atque in saepe iusto placeat ducimus fugiat harum perspiciatis fugit, distinctio esse iure itaque id.
+</blockquote>
+<cite>
+    <img src="image/customer-1.jpg">
+        Alberto Ducan
+</cite>
+</div>
+<div class="review-child">
+    <blockquote>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas numquam sapiente harum aliquid itaque odit quo quos similique nihil tempore! Molestias, odit quia! Repellendus soluta sapiente dolor, blanditiis nemo eos?
+    </blockquote>
+    <cite>
+        <img src="./image/customer-2.jpg">
+            joana silva   
+    </cite>
+</div>
+<div class="review-child">
+    <blockquote>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam perspiciatis aperiam commodi accusamus deleniti enim vitae minus nesciunt! Officiis nulla illo architecto eaque sit quaerat itaque cumque nesciunt voluptatum magni!
+</blockquote>
+<cite>
+    <img src="./image/customer-3.jpg">
+milton chapman
+</cite>
+</div>
+</div>
+</section>
+<section class="plan">
+<h2 style="text-align: center">START EATING HEALTHY TODAY</h2>
+<hr>
+<div class="plan-parent">
+<div class="child">
+    <h3 style="font-size: x-large">PREMIUM</h3>
+<h1 style="color: green;font-size: xx-large">$399</h1>
+<p>That is only $13.30 per meal</p>
+<div class="icon-list1"><i class="fas fa-1x fa-check-circle"></i><p>1 meal every day</p></div>
+<div class="icon-list1"><i class="fas fa-1x fa-check-circle"></i><p>order 24/7</p></div>
+<div class="icon-list1"><i class="fas fa-1x fa-check-circle"></i><p>Access to newest creation </p></div>
+<div class="icon-list1"><i class="fas fa-1x fa-check-circle"></i><p>Free delivery</p></div>
+<div class="icon-list1"><a>SIGNUP</a></div>
+</div>
+<div class="child">
+
+        <h3 style="font-size: x-large">PRO</h3>
+        <h1 style="color: green;font-size: xx-large">$149</h1>
+        <p>That is only $149 per meal</p>
+       <div class="icon-list1"> <i class="fas fa-1x fa-check-circle"></i><p>1 meal 10 days/month</p></div>
+      <div class="icon-list1"> <i class="fas fa-1x fa-check-circle"></i><p>order 24/7</p></div>
+     <div class="icon-list1">  <i class="fas fa-1x fa-check-circle"></i><p>Access to newest creation </p></div>
+      <div class="icon-list1"> <i class="fas fa-1x fa-check-circle"></i><p>Free delivery</p></div>
+      <div class="icon-list1"><a>SIGNUP</a></div>
+</div>
+<div class="child">
+
+        <h3 style="font-size: x-large">STARTER</h3>
+        <h1 style="color: green;font-size: xx-large">$19</h1>
+       <div class="icon-list1"> <i class="fas fa-1x fa-check-circle"></i><p>1 meal </p></div>
+      <div class="icon-list1"> <i class="fas fa-1x fa-check-circle"></i><p>order from 8 am to 12pm </p></div>
+     <div class="icon-list1">  <i class="fas fa-1x fa-check-circle"></i><p>Free delivery</p></div>
+     <div class="icon-list1"><a>SIGNUP</a></div>
+</div>
+
+</div>
+</section>
+<section class="form">
+<h1 style="text-align: center">WE'RE HAPPY TO HEAR FROM YOU</h1>
+<hr>
+<div class="parent-form">
+<form>
+    <div>
+<div class="child-form">Name:</div><input type="text" name="fname" placeholder="Your Name"><br>
+</div>
+<div>
+<div class="child-form">Email:</div><input type="text" name="email" placeholder="Your E-mail"><br>
+</div>
+<div>
+<div class="child-form">How Did You Fnd Us:</div><select name="options">
+        <option value="family">Family</option>
+        <option value="friends">Friends</option>
+        <option value="newspaper">Newspaper</option>
+      </select><br>
+    </div>
+    <div>
+<div class="child-form">Newsletter:</div><input type="radio" name="news" checked>Yes,please<br>
+</div>
+<div>
+    <div class="child-form">Drop us a line:</div>
+
+<textarea name="message" rows="10" cols="30" placeholder="Your message"></textarea><br>
+</div>
+<button>
+    send it
+</button>
+</div>
+
+</form>
+</section>
+<footer>
+    <div class="footer-parent">
+        <div class="footer-text"></div>
+<ul>
+
+       <li class="text-value"> <a>About us</a></li>
+       <li class="text-value">  <a>Blog</a></li>
+       <li class="text-value">  <a>Press</a></li>
+       <li class="text-value">  <a>ios App</a></li>
+       <li class="text-value"> <a>Android App</a></li>
+    
+</ul>
+</div>
+<div class="social-link">
+<ul>
+    
+            <li ><i class="fab fa-2x fa-facebook-square"></i></li>
+            <li> <i class="fab fa-2x fa-twitter-square"></i></li>
+            <li > <i class="fab fa-2x fa-instagram"></i></li>
+            <li > <i class="fab fa-2x fa-snapchat-square"></i></li>
+    
+</ul>
+</div>
+ <p style="text-align: center;margin-top: 10%">copyright 2019 Omnifood. All rights reserved.</p>  -->
+</footer>
+</body>
+</html>
